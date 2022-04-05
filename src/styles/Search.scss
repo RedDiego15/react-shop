@@ -2,6 +2,8 @@
     display:flex;
     flex-direction:column;
     margin-top:1rem;
+    z-index: 1;
+    align-items: center;
 }
 .search__input-container{
     position:relative;
@@ -33,6 +35,7 @@
 .input__order{
     border: none;
     width:6.2rem;
+    outline:none;
 }
 .order_icon{
     position: absolute;
@@ -47,6 +50,7 @@
     }
     .search__input{
         width:20rem;
+        outline:none;
     }
   }
 

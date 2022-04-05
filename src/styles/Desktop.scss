@@ -1,13 +1,14 @@
 .desktop-menu {
   position: absolute;
-  top: 60px;
-  right:80px;
+  top: 51px;
+  right: 67px;
   background-color:white;
   width: 100px;
   height: 11rem;
   border: 1px solid var(--very-light-pink);
   border-radius: 6px;
   padding: 20px 20px 0 20px;
+  z-index: 2;
   }
   .desktop-menu .desktop-menu__list {
     list-style: none;
@@ -35,5 +36,11 @@
     text-decoration: none;
     margin-bottom: 20px;
     display: inline-block;
+  }
+  @media (max-width: 640px) {
+    .desktop-menu {
+      display: none;
+    }
+    
   }
   
