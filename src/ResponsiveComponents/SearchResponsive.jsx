@@ -2,7 +2,6 @@ import React from 'react'
 import { SearchItem } from '@components/SearchItem/SearchItem'
 import { SearchContainer } from '@containers/SearchContainer'
 import {CategoriesBar} from '@components/CategoriesBar/CategoriesBar'
-import {MobileContainer} from '@containers/MobileContainer';
 
 const SearchResponsive = ({isMobile,isDesktop}) => {
   return (

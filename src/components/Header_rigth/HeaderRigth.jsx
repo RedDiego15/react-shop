@@ -9,7 +9,7 @@ function HeaderRigth({IconShoppingCart}) {
       <ul>
         <li className="navbar-email">
           platzi@example.com
-          <IconContext.Provider value={{className: "header_arraw-icon"}}>
+          <IconContext.Provider value={{className: "header__arrow-icon"}}>
             <IoIosArrowDown />
           </IconContext.Provider>
         </li>

@@ -24,8 +24,10 @@ module.exports = {
             '@icons':path.resolve(__dirname,'./icons'),
             '@components':path.resolve(__dirname,'./src/components'),
             '@containers':path.resolve(__dirname,'./src/Containers'),
-            '@responsiveComponents': path.resolve(__dirname,'./src/ResponsiveComponents')
-         }
+            '@responsiveComponents': path.resolve(__dirname,'./src/ResponsiveComponents'),
+            '@pages':path.resolve(__dirname,'./src/Pages'),
+            '@responsiveHook':path.resolve(__dirname,'./src/ResponsiveHook')
+        }
     }, 
     module:{
         rules:[

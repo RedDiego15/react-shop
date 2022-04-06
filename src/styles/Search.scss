@@ -26,6 +26,7 @@
 }
 .navbar__search{
     overflow-x: auto;
+    width: 100%;
 }
 .search__order{
     display: flex;
@@ -51,6 +52,9 @@
     .search__input{
         width:20rem;
         outline:none;
+    }
+    .navbar__search{
+        width:auto;
     }
   }
 

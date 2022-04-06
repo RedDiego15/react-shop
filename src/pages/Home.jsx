@@ -1,21 +1,33 @@
 import React from "react";
 import {HeaderResponsive} from "@responsiveComponents/HeaderResponsive";
 import {SearchResponsive} from "@responsiveComponents/SearchResponsive";
-import {useMediaQuery} from "react-responsive";
+
 import {HeaderContainer} from "@containers/HeaderContainer"
 import {Products} from '@components/Products/Products'
+import {FaArrowLeft} from 'react-icons/fa'
+
+import { CheckOut } from "@components/CheckOut/CheckOut";
+import { HeaderMobile } from "../components/HeaderMobile/HeaderMobile";
+import { ResponsivePage } from '@responsiveHook/ResponsivePage';
+
 const Home = () => {
-  const isMobile = useMediaQuery({
-    query: "(max-device-width: 639px)",
-  });
-  const isDesktop = useMediaQuery({
-    query: "(min-device-width: 640px)",
-  });
+  const {isMobile,isDesktop} = ResponsivePage()
+  
   return (
     <HeaderContainer>
       <HeaderResponsive isMobile={isMobile} isDesktop={isDesktop} />
+
       <SearchResponsive isMobile={isMobile} isDesktop={isDesktop} />
       <Products />
+      {/* {isDesktop && <ItemDetail isDesktop={isDesktop}/>} */}
+      {isDesktop && (
+        <CheckOut>
+          <HeaderMobile className="header-checkout">
+            <FaArrowLeft/>
+            <p>ShoppingCart</p>
+          </HeaderMobile>
+        </CheckOut>
+      )}
     </HeaderContainer>
   );
 };

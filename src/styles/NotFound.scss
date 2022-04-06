@@ -1,0 +1,30 @@
+.notFound-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.notFound__background{
+    position: relative;
+    background-color: var(--hospital-green);
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+
+}
+.notFound__numbers{
+    position: absolute;
+    font-weight: bold;
+    font-size:8.4rem;
+    color: white;
+    top:-100px;
+    left:17px;
+}
+.notFound__tittle{
+    font-weight: bold;
+    font-size:2.4rem;
+    color: var(--hospital-green);
+
+}

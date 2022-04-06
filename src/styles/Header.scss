@@ -2,11 +2,14 @@
   padding: 24px;
 }
 
-.mobile-menu a {
+.mobile-menu a,
+.mobile-menu p{
   text-decoration: none;
   color: var(--black);
   font-weight: bold;
-  /* margin-bottom: 24px; */
+}
+.mobile-menu p{
+  font-size:19px;
 }
 
 .mobile-menu ul {
@@ -33,8 +36,8 @@
   color: var(--hospital-green) !important;
 }
 
-.logo-header {
-  margin-bottom: 0;
+.logo .logo-header{
+  margin-bottom:0;
 }
 
 .navbar-right {
@@ -56,6 +59,7 @@
 
 .navbar-left {
   display: flex;
+  align-items: center;
 }
 
 .navbar-left ul {
@@ -79,8 +83,10 @@
 }
 .header__arrow-icon{
   margin-top:2px;
+  padding: 4px;
 }
 .navbar-email {
+  position: relative;
   color: var(--very-light-pink);
   font-size: var(--sm);
   display: flex;
@@ -103,7 +109,63 @@
   justify-content: center;
   align-items: center;
 }
-
+.desktop-menu {
+  position: absolute;
+  top: 51px;
+  right: 67px;
+  background-color:white;
+  width: 100px;
+  height: 11rem;
+  border: 1px solid var(--very-light-pink);
+  border-radius: 6px;
+  padding: 20px 20px 0 20px;
+  z-index: 2;
+  display: none;
+  }
+  .desktop-menu .desktop-menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display:block;
+  }
+  .desktop-menu .desktop-menu__list li {
+    text-align: end;
+  }
+  .desktop-menu .desktop-menu__list li:nth-child(1),
+  .desktop-menu .desktop-menu__list li:nth-child(2) {
+    font-weight: bold;
+  }
+  .desktop-menu .desktop-menu__list li:last-child {
+    padding-top: 20px;
+    border-top: 1px solid var(--very-light-pink);
+  }
+  .desktop-menu .desktop-menu__list li:last-child a {
+    color: var(--hospital-green);
+    font-size: var(--sm);
+  }
+  .desktop-menu .desktop-menu__list li a {
+    color: var(--back);
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+.header-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+  .header-checkout{
+    width: 9.5rem;
+    justify-self: flex-start;
+    font-size:19px;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+  }
+  .mobile-check-out p{
+    margin: auto ;
+  }
 @media (max-width: 640px) {
   .menu {
     display: block;
@@ -114,9 +176,8 @@
   }
   .navbar-left{
     justify-content: space-between;
-
+    margin-bottom:0.5rem;
   }
-
   .navbar-email {
     display: none;
   }

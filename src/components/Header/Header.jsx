@@ -6,10 +6,7 @@ function Header({children}) {
   return (
     <header>
       <nav>
-        <div className="navbar-left">
-          {children}
-          <HeaderRigth IconShoppingCart={IconShoppingCart} />
-        </div>
+        <div className="navbar-left">{children}</div>
       </nav>
     </header>
   );
