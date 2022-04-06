@@ -1,5 +1,5 @@
 import React from 'react'
-import LogoSale from '../../../logos/logo_yard_sale.svg'
+import LogoSale from '@logos/logo_yard_sale.svg'
 function RecoverPass() {
     return (
         <div className="login">

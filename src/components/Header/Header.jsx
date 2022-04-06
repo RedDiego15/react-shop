@@ -1,6 +1,4 @@
 import React from 'react'
-import IconShoppingCart from '../../../icons/icon_shopping_cart.svg';
-import { HeaderRigth } from '../Header_rigth/HeaderRigth';
 
 function Header({children}) {
   return (

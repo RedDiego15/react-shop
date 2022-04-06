@@ -20,8 +20,8 @@ module.exports = {
         extensions: ['.js','.jsx','.json','.scss'],
          alias: {
             '@styles': path.resolve(__dirname,'./src/styles'),
-            '@logos':path.resolve(__dirname,'./logos'),
-            '@icons':path.resolve(__dirname,'./icons'),
+            '@logos':path.resolve(__dirname,'./assets/logos'),
+            '@icons':path.resolve(__dirname,'./assets/icons'),
             '@components':path.resolve(__dirname,'./src/components'),
             '@containers':path.resolve(__dirname,'./src/Containers'),
             '@responsiveComponents': path.resolve(__dirname,'./src/ResponsiveComponents'),

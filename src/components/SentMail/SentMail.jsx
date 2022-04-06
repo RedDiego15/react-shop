@@ -1,6 +1,6 @@
 import React from 'react'
-import LogoSale from '../../../logos/logo_yard_sale.svg'
-import MailIcon from '../../../icons/mail.svg'
+import LogoSale from '@logos/logo_yard_sale.svg'
+import MailIcon from '@icons/mail.svg'
 function SentMail() {
   return (
     <div class="login">

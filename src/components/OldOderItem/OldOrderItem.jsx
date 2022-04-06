@@ -1,5 +1,5 @@
 import React from 'react'
-import Arrow from '../../../icons/flechita.svg'
+import Arrow from '@icons/flechita.svg'
 function OldOrderItem() {
   return (
     <div className="order">

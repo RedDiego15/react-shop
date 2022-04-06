@@ -1,5 +1,5 @@
 import React from 'react'
-import AddToCar from '../../../icons/bt_add_to_cart.svg'
+import AddToCar from '@icons/bt_add_to_cart.svg'
 function Item() {
   return (
     <>

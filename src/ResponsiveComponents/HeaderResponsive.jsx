@@ -1,6 +1,6 @@
 import React from 'react'
 
-import YardSale from '../../logos/logo_yard_sale.svg'
+import YardSale from '@logos/logo_yard_sale.svg'
 import IconMenu from '@icons/icon_menu.svg'
 import ShoppingCart from '@icons/icon_shopping_cart.svg'
 import { CategoriesBar } from '@components/CategoriesBar/CategoriesBar'

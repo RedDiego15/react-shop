@@ -1,6 +1,6 @@
 import React from 'react'
-import IconClose from '../../../icons/icon_close.svg'
-import BtAddCart from '../../../icons/bt_add_to_cart.svg'
+import IconClose from '@icons/icon_close.svg'
+import BtAddCart from '@icons/bt_add_to_cart.svg'
 import {FaArrowLeft} from 'react-icons/fa'
 function ItemDetail({isDesktop,isMobile}) {
   return (
