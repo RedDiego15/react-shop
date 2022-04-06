@@ -92,6 +92,13 @@
   display: flex;
   align-items: center;
   margin-right: 36px;
+  padding:10px 0;
+}
+.navbar-email:hover .desktop-menu{
+  display:block;
+}
+.navbar-email .login-desktop{
+  color:var(--hospital-green)
 }
 
 .navbar-shopping-cart {
@@ -110,9 +117,10 @@
   align-items: center;
 }
 .desktop-menu {
+  display:none;
   position: absolute;
-  top: 51px;
-  right: 67px;
+  top: 34px;
+  right: 17px;
   background-color:white;
   width: 100px;
   height: 11rem;
@@ -120,7 +128,6 @@
   border-radius: 6px;
   padding: 20px 20px 0 20px;
   z-index: 2;
-  display: none;
   }
   .desktop-menu .desktop-menu__list {
     list-style: none;
@@ -180,5 +187,6 @@
   }
   .navbar-email {
     display: none;
+    
   }
 }

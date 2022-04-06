@@ -1,6 +1,16 @@
 import React from 'react'
 import AddToCar from '@icons/bt_add_to_cart.svg'
+
 function Item() {
+  const [isSelected,setIsSelected] = React.useState(false)
+
+  const addItem = () =>{
+    console.log('antes,'+isSelected)
+    setIsSelected(prevState => !prevState)
+    alert('anadio un objeto')
+    console.log(isSelected);
+  }
+
   return (
     <>
          <div className="product-card">
@@ -10,7 +20,7 @@ function Item() {
                 <p>$120,00</p>
                 <p>Bike</p>
             </div>
-            <figure>
+            <figure onClick={addItem}>
                 <img src={AddToCar} alt="product-image"/>
             </figure>
             </div>

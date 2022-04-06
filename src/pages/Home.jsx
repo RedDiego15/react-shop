@@ -19,10 +19,9 @@ const Home = () => {
 
       <SearchResponsive isMobile={isMobile} isDesktop={isDesktop} />
       <Products />
-      {/* {isDesktop && <ItemDetail isDesktop={isDesktop}/>} */}
       {isDesktop && (
         <CheckOut>
-          <HeaderMobile className="header-checkout">
+          <HeaderMobile selector="header-checkout">
             <FaArrowLeft/>
             <p>ShoppingCart</p>
           </HeaderMobile>
