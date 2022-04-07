@@ -1,27 +1,32 @@
 import React from 'react'
-import AddToCar from '@icons/bt_add_to_cart.svg'
+import AddToCarImage from '@icons/bt_add_to_cart.svg'
+import {AppContext} from '@context/AppContext'
 
-function Item({ImgUrl,title,price}) {
+function Item({item}) {
+
   const [isSelected,setIsSelected] = React.useState(false)
 
+  const {state,addToCart} = React.useContext(AppContext)
   const addItem = () =>{
     console.log('antes,'+isSelected)
     setIsSelected(prevState => !prevState)
     alert('anadio un objeto')
     console.log(isSelected);
+    addToCart(item);
+    console.log(state.cart)
   }
 
   return (
     <>
          <div className="product-card">
-            <img src={ImgUrl} alt="product-image"/>
+            <img src={item.category.image} alt="product-image"/>
             <div className="product-info">
             <div>
-                <p>{`$ ${price}`}</p>
-                <p>{title}</p>
+                <p>{`$ ${item.price}`}</p>
+                <p>{item.title}</p>
             </div>
             <figure onClick={addItem}>
-                <img src={AddToCar} alt="product-image"/>
+                <img src={AddToCarImage} alt="product-image"/>
             </figure>
             </div>
         </div>

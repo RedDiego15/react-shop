@@ -3,8 +3,9 @@ import {DesktopMenu} from '@components/DesktopMenu/DesktopMenu'
 import {IoIosArrowDown} from "react-icons/io";
 import {IconContext} from "react-icons"
 
-function HeaderRigth({IconShoppingCart}) {
+function HeaderRigth({children}) {
   const [isLogged,setIsLogged] = React.useState(true);
+  
   const handleLoginClick = ()=>{
     alert('se va a loggear');
   }
@@ -30,8 +31,7 @@ function HeaderRigth({IconShoppingCart}) {
 
         <li className="navbar-shopping-cart">
           <div>
-            <img src={IconShoppingCart} alt="shopping cart" />
-            <p>2</p>
+            {children}
           </div>
         </li>
       </ul>

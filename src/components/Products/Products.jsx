@@ -1,6 +1,6 @@
 import React from 'react'
-import { ProductsContainer } from '../../Containers/ProductsContainer'
-import { Item } from '../Item/Item'
+import { ProductsContainer } from '@containers/ProductsContainer'
+import { Item } from '@components/Item/Item'
 import {useGetProducts} from '@hooks/useGetProducts'
 function Products() {
 
@@ -14,8 +14,7 @@ function Products() {
 
                     {products.map((item)=> (<Item 
                     ImgUrl = {item.category.image}
-                    price={item.price}
-                    title={item.title}
+                    item={item}
                     key={item.id}/>))}
                 </div>
             </section>
