@@ -1,7 +1,7 @@
 import React from 'react'
 import AddToCar from '@icons/bt_add_to_cart.svg'
 
-function Item() {
+function Item({ImgUrl,title,price}) {
   const [isSelected,setIsSelected] = React.useState(false)
 
   const addItem = () =>{
@@ -14,11 +14,11 @@ function Item() {
   return (
     <>
          <div className="product-card">
-            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="product-image"/>
+            <img src={ImgUrl} alt="product-image"/>
             <div className="product-info">
             <div>
-                <p>$120,00</p>
-                <p>Bike</p>
+                <p>{`$ ${price}`}</p>
+                <p>{title}</p>
             </div>
             <figure onClick={addItem}>
                 <img src={AddToCar} alt="product-image"/>

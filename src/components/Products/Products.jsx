@@ -1,18 +1,22 @@
 import React from 'react'
 import { ProductsContainer } from '../../Containers/ProductsContainer'
 import { Item } from '../Item/Item'
-
+import {useGetProducts} from '@hooks/useGetProducts'
 function Products() {
-    let items =[]
-    for(let i=0;i<15;i++){
-        items.push(<Item key={i}/>)
-    }
 
+    const {products,isLoading,errorGetProducts} = useGetProducts(15)
+    
     return (
         <ProductsContainer>
             <section className="main-container">
                 <div className="cards-container">
-                    {items.map((item) => (item))}
+                    {isLoading && (<p>Loading...</p>)}
+
+                    {products.map((item)=> (<Item 
+                    ImgUrl = {item.category.image}
+                    price={item.price}
+                    title={item.title}
+                    key={item.id}/>))}
                 </div>
             </section>
          </ProductsContainer>

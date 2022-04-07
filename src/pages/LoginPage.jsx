@@ -1,16 +1,16 @@
 import React from 'react'
 import { Login } from '@components/Login/Login';
-import { ResponsivePage } from '@responsiveHook/ResponsivePage';
+import { useResponsivePage } from '@hooks/useResponsivePage';
 
 import {HeaderResponsive} from '@responsiveComponents/HeaderResponsive'
 const LoginPage = () => {
-  const {isMobile,isDesktop} = ResponsivePage()
+  const {isMobile,isDesktop} = useResponsivePage()
   return (
     <>
       {isMobile && <Login />}
       {isDesktop && (
         <>
-          <HeaderResponsive isDesktop={isDesktop} />
+          <HeaderResponsive  />
           <Login />
         </>
       )}

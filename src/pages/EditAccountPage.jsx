@@ -1,5 +1,5 @@
 import {HeaderResponsive} from '@responsiveComponents/HeaderResponsive';
-import { ResponsivePage } from '@responsiveHook/ResponsivePage';
+import { useResponsivePage } from '@hooks/useResponsivePage';
 import React from 'react'
 import { EditAccount } from '@components/MyAccount/EditAccount';
 

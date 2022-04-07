@@ -1,11 +1,11 @@
 import React from 'react'
 import {HeaderResponsive} from '@responsiveComponents/HeaderResponsive';
-import { ResponsivePage } from '@responsiveHook/ResponsivePage';
+import { useResponsivePage } from '@hooks/useResponsivePage';
 
 import { CreateAccount } from '@components/MyAccount/CreateAccount';
 
 const CreateAccountPage = () => {
-    const {isMobile,isDesktop} = ResponsivePage()
+    const {isMobile,isDesktop} = useResponsivePage()
     return (
       <>
         <HeaderResponsive isMobile={isMobile} isDesktop={isDesktop} />

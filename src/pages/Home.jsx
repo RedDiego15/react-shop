@@ -8,10 +8,10 @@ import {FaArrowLeft} from 'react-icons/fa'
 
 import { CheckOut } from "@components/CheckOut/CheckOut";
 import { HeaderMobile } from "../components/HeaderMobile/HeaderMobile";
-import { ResponsivePage } from '@responsiveHook/ResponsivePage';
+import { useResponsivePage } from '@hooks/useResponsivePage';
 
 const Home = () => {
-  const {isMobile,isDesktop} = ResponsivePage()
+  const {isMobile,isDesktop} = useResponsivePage()
   
   return (
     <HeaderContainer>

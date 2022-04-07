@@ -1,6 +1,5 @@
-import React from 'react'
 import {useMediaQuery} from "react-responsive";
-const ResponsivePage = () => {
+const useResponsivePage = () => {
     const isMobile = useMediaQuery({
       query: "(max-device-width: 639px)",
     });
@@ -16,4 +15,4 @@ const ResponsivePage = () => {
     
 }
 
-export {ResponsivePage}
+export {useResponsivePage}

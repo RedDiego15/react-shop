@@ -26,7 +26,7 @@ module.exports = {
             '@containers':path.resolve(__dirname,'./src/Containers'),
             '@responsiveComponents': path.resolve(__dirname,'./src/ResponsiveComponents'),
             '@pages':path.resolve(__dirname,'./src/Pages'),
-            '@responsiveHook':path.resolve(__dirname,'./src/ResponsiveHook')
+            '@hooks':path.resolve(__dirname,'./src/Hooks')
         }
     }, 
     module:{

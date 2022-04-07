@@ -2,10 +2,10 @@ import React from 'react'
 
 import {HeaderResponsive} from '@responsiveComponents/HeaderResponsive'
 import { SentMail } from '@components/SentMail/SentMail';
-import { ResponsivePage } from '@responsiveHook/ResponsivePage';
+import { useResponsivePage } from '@hooks/useResponsivePage';
 
 const MailSentPage = () => {
-    const {isMobile, isDesktop} = ResponsivePage();
+    const {isMobile, isDesktop} = useResponsivePage();
     return (
       <>
         {isMobile && <SentMail />}

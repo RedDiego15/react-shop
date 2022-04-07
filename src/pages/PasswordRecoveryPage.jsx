@@ -1,10 +1,10 @@
 import React from 'react'
 import { RecoverPass } from '@components/RecoverPass/RecoverPass';
 import {HeaderResponsive} from '@responsiveComponents/HeaderResponsive'
-import { ResponsivePage } from '@responsiveHook/ResponsivePage';
+import { useResponsivePage } from '@hooks/useResponsivePage';
 
 const PasswordRecoveryPage = () => {
-    const {isMobile,isDesktop} = ResponsivePage()
+    const {isMobile,isDesktop} = useResponsivePage()
     return (
         <>
         {isMobile && <RecoverPass />}

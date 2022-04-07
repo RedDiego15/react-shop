@@ -1,11 +1,11 @@
 import React from 'react'
 import { HeaderResponsive } from '@responsiveComponents/HeaderResponsive'
-import { ResponsivePage } from '@responsiveHook/ResponsivePage';
+import { useResponsivePage } from '@hooks/useResponsivePage';
 
 import { HeaderContainer} from '@containers/HeaderContainer'
 import { ItemDetail } from '@components/ItemDetail/ItemDetail';
 const ItemDetailMobile = () => {
-  const {isMobile} = ResponsivePage()
+  const {isMobile} = useResponsivePage()
     return (
       <HeaderContainer>
         <HeaderResponsive isMobile={isMobile} />

@@ -1,10 +1,10 @@
 import React from 'react'
 import {HeaderResponsive} from '@responsiveComponents/HeaderResponsive';
 import { CreatePass } from '../components/CreatePass/CreatePass';
-import { ResponsivePage } from '@responsiveHook/ResponsivePage';
+import { useResponsivePage } from '@hooks/useResponsivePage';
 
 const CreatePasswordPage = () => {
-    const {isMobile,isDesktop} = ResponsivePage()
+    const {isMobile,isDesktop} = useResponsivePage()
     return (
         <>
         {isMobile && <CreatePass />}
