@@ -14,8 +14,6 @@ module.exports = {
         
     },
     mode: "development",
-    // watch: true,
-    // devtool: true,
     resolve :{
         extensions: ['.js','.jsx','.json','.scss'],
          alias: {

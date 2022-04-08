@@ -19,12 +19,14 @@ module.exports = {
         extensions: ['.js','.jsx'],
         alias: {
             '@styles': path.resolve(__dirname,'./src/styles'),
-            '@logos':path.resolve(__dirname,'./logos'),
-            '@icons':path.resolve(__dirname,'./icons'),
+            '@logos':path.resolve(__dirname,'./assets/logos'),
+            '@icons':path.resolve(__dirname,'./assets/icons'),
             '@components':path.resolve(__dirname,'./src/components'),
             '@containers':path.resolve(__dirname,'./src/Containers'),
-            '@responsiveComponents': path.resolve(__dirname,'./src/ResponsiveComponents')
-         
+            '@responsiveComponents': path.resolve(__dirname,'./src/ResponsiveComponents'),
+            '@pages':path.resolve(__dirname,'./src/Pages'),
+            '@hooks':path.resolve(__dirname,'./src/Hooks'),
+            '@context':path.resolve(__dirname,'./src/Context')
             
         }
     }, 
@@ -59,13 +61,6 @@ module.exports = {
                   loader: 'url-loader',
                 },
             },
-            // {
-            //     test: /\.(woff|woff2)$/,
-            //     type: 'asset/resource',
-            //     generator:{
-            //         filename: "assets/fonts/[name][contenthash][ext]" 
-            //     }
-            // }
         ]
     },
     plugins:[
