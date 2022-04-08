@@ -1,8 +1,8 @@
 # react-shop
 
 
-This project was createade with a personal configuration in webpack, made with responsive design, separate page with react route and manage SPA in home, until now this is the first version of the project 
-it still needs manage the routes. 
+This project was created with a personal configuration in webpack, made with responsive design, separate pages with react route and manage SPA in home, until now this is the first version of the project. 
+It still needs manage the routes. only front-end client side rendering
 
 ## Available Scripts
 
