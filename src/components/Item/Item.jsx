@@ -6,7 +6,7 @@ function Item({item}) {
 
   const [isSelected,setIsSelected] = React.useState(false)
 
-  const {state,addToCart} = React.useContext(AppContext)
+  const {state:{toggleItemInfo},addToCart,setToggleItemInfo} = React.useContext(AppContext)
   const addItem = () =>{
     setIsSelected(prevState => !prevState)  
     addToCart(item);
@@ -16,7 +16,9 @@ function Item({item}) {
   return (
     <>
          <div className="product-card">
-            <img src={item.category.image} alt="product-image"/>
+            <img 
+            onClick={() => setToggleItemInfo()}
+            src={item.category.image} alt="product-image"/>
             <div className="product-info">
             <div>
                 <p>{`$ ${item.price}`}</p>

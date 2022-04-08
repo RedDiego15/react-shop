@@ -4,6 +4,7 @@ const initialState = {
     cart:[],
     toggleOrder:false,
     totalItems:0,
+    toggleItemInfo:false
 
 }
 
@@ -43,6 +44,15 @@ const useInitialState =() =>{
         
     
     }
+    const setToggleItemInfo= ()=>{
+      setState({
+          ...state,
+          toggleItemInfo:!state.toggleItemInfo
+      })
+      console.log(state)
+      
+  
+  }
     const actualizeQuantity = (payload,newQuantity) =>{
         const idx = state.cart.indexOf(payload)
         state.cart[idx].quantity=newQuantity; 
@@ -65,7 +75,7 @@ const useInitialState =() =>{
         setToggleOrder,
         actualizeQuantity,
         deleteItem,
-
+        setToggleItemInfo,
     }
 }
 

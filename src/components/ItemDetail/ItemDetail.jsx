@@ -1,14 +1,22 @@
 import React from 'react'
 import IconClose from '@icons/icon_close.svg'
 import BtAddCart from '@icons/bt_add_to_cart.svg'
-import {FaArrowLeft} from 'react-icons/fa'
+import {FaArrowLeft} from 'react-icons/fa';
+import {AppContext} from '@context/AppContext'
+
 function ItemDetail({isDesktop,isMobile}) {
+  const {setToggleItemInfo} = React.useContext(AppContext)
+
   return (
     <aside className="product-detail">
       
-        <div className="product-detail-close">
+        <div 
+        onClick={() => setToggleItemInfo()}
+        className="product-detail-close">
         {isDesktop && (
-            <img src={IconClose} alt="close" className="close-icon" />)
+            <img 
+            
+            src={IconClose} alt="close" className="close-icon" />)
         }
         {isMobile && (
             <FaArrowLeft className="close-icon" />)
