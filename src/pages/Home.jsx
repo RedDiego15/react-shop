@@ -4,14 +4,17 @@ import {SearchResponsive} from "@responsiveComponents/SearchResponsive";
 
 import {HeaderContainer} from "@containers/HeaderContainer"
 import {Products} from '@components/Products/Products'
+
+import { useResponsivePage } from '@hooks/useResponsivePage';
 import {FaArrowLeft} from 'react-icons/fa'
 
 import { CheckOut } from "@components/CheckOut/CheckOut";
 import { HeaderMobile } from "../components/HeaderMobile/HeaderMobile";
-import { useResponsivePage } from '@hooks/useResponsivePage';
+import {AppContext} from '@context/AppContext';
 
 const Home = () => {
   const {isMobile,isDesktop} = useResponsivePage()
+  const {state:{toggleOrder}} = React.useContext(AppContext)
   
   return (
     <HeaderContainer>
@@ -19,13 +22,16 @@ const Home = () => {
 
       <SearchResponsive isMobile={isMobile} isDesktop={isDesktop} />
       <Products />
-      {isDesktop && (
-        <CheckOut>
-          <HeaderMobile selector="header-checkout">
-            <FaArrowLeft/>
-            <p>ShoppingCart</p>
-          </HeaderMobile>
-        </CheckOut>
+      
+      {toggleOrder && (
+        <>
+          <CheckOut>
+            <HeaderMobile selector="header-checkout">
+              <FaArrowLeft />
+              <p>ShoppingCart</p>
+            </HeaderMobile>
+          </CheckOut>
+        </>
       )}
     </HeaderContainer>
   );

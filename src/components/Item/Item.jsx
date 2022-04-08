@@ -8,12 +8,9 @@ function Item({item}) {
 
   const {state,addToCart} = React.useContext(AppContext)
   const addItem = () =>{
-    console.log('antes,'+isSelected)
-    setIsSelected(prevState => !prevState)
-    alert('anadio un objeto')
-    console.log(isSelected);
+    setIsSelected(prevState => !prevState)  
     addToCart(item);
-    console.log(state.cart)
+    
   }
 
   return (

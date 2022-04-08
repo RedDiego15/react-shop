@@ -7,20 +7,18 @@ function Products() {
     const {products,isLoading,errorGetProducts} = useGetProducts(15)
     
     return (
-        <ProductsContainer>
-            <section className="main-container">
-                <div className="cards-container">
-                    {isLoading && (<p>Loading...</p>)}
+      <ProductsContainer>
+        <section className="main-container">
+          <div className="cards-container">
+            {isLoading && <p>Loading...</p>}
 
-                    {products.map((item)=> (<Item 
-                    ImgUrl = {item.category.image}
-                    item={item}
-                    key={item.id}/>))}
-                </div>
-            </section>
-         </ProductsContainer>
-    
-  )
+            {products.map((item) => (
+              <Item ImgUrl={item.category.image} item={item} key={`itemProduct-${item.id}`} />
+            ))}
+          </div>
+        </section>
+      </ProductsContainer>
+    );
 }
 
 export {Products}
