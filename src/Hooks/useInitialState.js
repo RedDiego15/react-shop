@@ -13,13 +13,6 @@ const useInitialState =() =>{
     const findItem = (payload) => {
       return state.cart.filter((item) => item.id === payload.id)[0];
     };
-    // const calculateTotalItems =() =>{
-    //   const newTotal= state.cart.reduce((prev, actual) => prev + actual.quantity, 0);
-    //   setState({
-    //     ...state,
-    //     totalItems: newTotal
-    // })
-    // }
 
     const addToCart = (payload) => {
       const item = findItem(payload);
@@ -42,10 +35,10 @@ const useInitialState =() =>{
         });
       }
     };
-    const setToggleOrder= (payload)=>{
+    const setToggleOrder= ()=>{
         setState({
             ...state,
-            toggleOrder:payload
+            toggleOrder:!state.toggleOrder
         })
         
     
@@ -59,14 +52,11 @@ const useInitialState =() =>{
           });
     }
     
-    const deleteItem = (item)=>{
-      const idx = state.cart.indexOf(item);
-      state.cart.splice(idx,1);
+    const deleteItem = (deleteItem)=>{
       setState({
         ...state,
-        cart: [...state.cart],
+        cart: state.cart.filter((item) => item.id !== deleteItem.id),
       });
-
     }
 
     return{

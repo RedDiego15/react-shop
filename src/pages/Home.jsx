@@ -14,7 +14,7 @@ import {AppContext} from '@context/AppContext';
 
 const Home = () => {
   const {isMobile,isDesktop} = useResponsivePage()
-  const {state:{toggleOrder}} = React.useContext(AppContext)
+  const {state:{toggleOrder},setToggleOrder} = React.useContext(AppContext)
   
   return (
     <HeaderContainer>
@@ -27,7 +27,7 @@ const Home = () => {
         <>
           <CheckOut>
             <HeaderMobile selector="header-checkout">
-              <FaArrowLeft />
+              <FaArrowLeft onClick={() => setToggleOrder()} />
               <p>ShoppingCart</p>
             </HeaderMobile>
           </CheckOut>

@@ -14,11 +14,12 @@ const HeaderResponsive = ({isMobile, isDesktop}) => {
     state: {cart, toggleOrder},
     setToggleOrder,
   } = React.useContext(AppContext);
+
   const totalItems = cart.reduce(
     (prev, actual) => prev + actual.quantity,
     0
   );
-  console.log(cart)
+  
 
   const dinamicCart = () => {
     return (
@@ -26,7 +27,7 @@ const HeaderResponsive = ({isMobile, isDesktop}) => {
         {cart.length == 0 && (
           <>
             <img
-              onClick={() => setToggleOrder(!toggleOrder)}
+              onClick={() => setToggleOrder()}
               src={ShoppingCart}
               alt="shopping cart"
             />
@@ -35,7 +36,7 @@ const HeaderResponsive = ({isMobile, isDesktop}) => {
         {cart.length > 0 && (
           <>
             <img
-              onClick={() => setToggleOrder(true)}
+              onClick={() => setToggleOrder()}
               src={CartNotificacionIcon}
               alt="shopping cart"
             />
