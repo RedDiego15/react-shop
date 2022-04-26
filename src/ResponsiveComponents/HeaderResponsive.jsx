@@ -8,6 +8,11 @@ import { Header } from "@components/Header/Header";
 import { HeaderRigth } from "@components/Header__Rigth/HeaderRigth";
 import CartNotificacionIcon from "@icons/icon_shopping_cart_notification.svg";
 import { AppContext } from "@context/AppContext";
+import styled from "styled-components";
+
+const StyledDesktopImg = styled.img`
+	height: 26px;
+`;
 
 const HeaderResponsive = ({ isMobile, isDesktop }) => {
 	const {
@@ -58,7 +63,7 @@ const HeaderResponsive = ({ isMobile, isDesktop }) => {
 			)}
 			{isDesktop && (
 				<Header>
-					<img src={YardSale} alt="logo" className="logo" />
+					<StyledDesktopImg src={YardSale} alt="logo" />
 					<CategoriesBar isMobile={isMobile} />
 					<HeaderRigth>{dinamicCart()}</HeaderRigth>
 				</Header>
