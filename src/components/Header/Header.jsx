@@ -1,13 +1,23 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
 
-function Header({children}) {
-  return (
-    <header>
-      <nav>
-        <div className="navbar-left">{children}</div>
-      </nav>
-    </header>
-  );
+const NavItemsContainer = styled.div`
+	display: flex;
+	align-items: center;
+	@media (max-width: 640px) {
+		justify-content: space-between;
+		margin-bottom: 0.5rem;
+	}
+`;
+
+function Header({ children }) {
+	return (
+		<header>
+			<nav>
+				<NavItemsContainer>{children}</NavItemsContainer>
+			</nav>
+		</header>
+	);
 }
 
-export  {Header}
+export { Header };

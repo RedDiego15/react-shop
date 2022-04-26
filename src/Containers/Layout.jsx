@@ -1,9 +1,12 @@
 import React from "react";
 import { HeaderResponsive } from "@responsiveComponents/HeaderResponsive";
+import { useResponsivePage } from "@hooks/useResponsivePage";
+
 const Layout = ({ children }) => {
+	const { isMobile, isDesktop } = useResponsivePage();
 	return (
 		<>
-			<HeaderResponsive></HeaderResponsive>
+			<HeaderResponsive isMobile={isMobile} isDesktop={isDesktop} />
 			{children}
 		</>
 	);
