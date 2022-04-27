@@ -11,6 +11,9 @@ const StyledButton = styled.button`
 	font-size: ${(props) => props.theme.md};
 	font-weight: bold;
 	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 `;
 const PrimaryButton = ({ children }) => {
 	return <StyledButton type="button">{children}</StyledButton>;

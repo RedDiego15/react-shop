@@ -5,7 +5,7 @@ import { Theme } from "@styles/Theme";
 
 import { Home } from "../pages/Home";
 import { NotFound } from "../pages/NotFound";
-import { ItemDetailMobile } from "@pages/ItemDetailMobile";
+import { MobileItemDetail } from "@pages/MobileItemDetail";
 import { MobileCategoriesPage } from "@pages/MobileCategoriesPage";
 import { LoginPage } from "@pages/LoginPage";
 import { PasswordRecoveryPage } from "@pages/PasswordRecoveryPage";
@@ -37,7 +37,7 @@ function App() {
 						<Route
 							exact
 							path="/mobile-product-detail"
-							element={<ItemDetailMobile />}
+							element={<MobileItemDetail />}
 						/>
 						<Route
 							exact
