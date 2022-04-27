@@ -1,8 +1,7 @@
 import React from "react";
-import { HeaderResponsive } from "@responsiveComponents/HeaderResponsive";
 import { SearchResponsive } from "@responsiveComponents/SearchResponsive";
 
-import { Layout } from "@containers/Layout";
+import { LayoutWithHeader } from "@containers/LayoutWithHeader";
 import { Products } from "@components/Products/Products";
 import { ItemDetail } from "@components/ItemDetail/ItemDetail";
 import { useResponsivePage } from "@hooks/useResponsivePage";
@@ -20,9 +19,7 @@ const Home = () => {
 	} = React.useContext(AppContext);
 
 	return (
-		<Layout>
-			{/* <HeaderResponsive isMobile={isMobile} isDesktop={isDesktop} /> */}
-
+		<LayoutWithHeader>
 			<SearchResponsive isMobile={isMobile} isDesktop={isDesktop} />
 			<Products />
 
@@ -39,7 +36,7 @@ const Home = () => {
 			{toggleItemInfo && (
 				<ItemDetail isDesktop={isDesktop} isMobile={isMobile} />
 			)}
-		</Layout>
+		</LayoutWithHeader>
 	);
 };
 
