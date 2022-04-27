@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
 
-const HeaderMobile = ({children,selector} = {}) => {
-  return (
-    <div className={`header-row ${selector}`}>
-        {children}
-    </div>
-  )
-}
+const Container = styled.div`
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	padding: 1rem;
+`;
+const HeaderMobile = ({ children } = {}) => {
+	return <Container>{children}</Container>;
+};
 
-export {HeaderMobile}
+export { HeaderMobile };

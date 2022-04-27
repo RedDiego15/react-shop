@@ -5,7 +5,6 @@ import { LayoutWithHeader } from "@containers/LayoutWithHeader";
 import { Products } from "@components/Products/Products";
 import { ItemDetail } from "@components/ItemDetail/ItemDetail";
 import { useResponsivePage } from "@hooks/useResponsivePage";
-import { FaArrowLeft } from "react-icons/fa";
 
 import { CheckOut } from "@components/CheckOut/CheckOut";
 import { HeaderMobile } from "../components/HeaderMobile/HeaderMobile";
@@ -25,12 +24,7 @@ const Home = () => {
 
 			{toggleOrder && (
 				<>
-					<CheckOut>
-						<HeaderMobile selector="header-checkout">
-							<FaArrowLeft onClick={() => setToggleOrder()} />
-							<p>ShoppingCart</p>
-						</HeaderMobile>
-					</CheckOut>
+					<CheckOut isMobile={isMobile} />
 				</>
 			)}
 			{toggleItemInfo && (

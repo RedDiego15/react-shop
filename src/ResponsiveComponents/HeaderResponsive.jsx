@@ -8,6 +8,7 @@ import { Header } from "@components/Header/Header";
 import { HeaderRigth } from "@components/Header__Rigth/HeaderRigth";
 import CartNotificacionIcon from "@icons/icon_shopping_cart_notification.svg";
 import { AppContext } from "@context/AppContext";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledDesktopImg = styled.img`
@@ -19,6 +20,8 @@ const HeaderResponsive = ({ isMobile, isDesktop }) => {
 		state: { cart, toggleOrder },
 		setToggleOrder,
 	} = React.useContext(AppContext);
+
+	const navigate = useNavigate();
 
 	const totalItems = cart.reduce((prev, actual) => prev + actual.quantity, 0);
 
@@ -36,13 +39,23 @@ const HeaderResponsive = ({ isMobile, isDesktop }) => {
 				)}
 				{cart.length > 0 && (
 					<>
-						<img
-							onClick={() => setToggleOrder()}
-							src={CartNotificacionIcon}
-							alt="shopping cart"
-						/>
+						{isMobile && (
+							<Link to="/mobile-check-out">
+								<img
+									onClick={() => setToggleOrder()}
+									src={CartNotificacionIcon}
+									alt="shopping cart"
+								/>
+							</Link>
+						)}
+
 						{isDesktop && (
 							<>
+								<img
+									onClick={() => setToggleOrder()}
+									src={CartNotificacionIcon}
+									alt="shopping cart"
+								/>
 								<p className="header-rigth__product-to-buy">{totalItems}</p>
 							</>
 						)}
