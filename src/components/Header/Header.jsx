@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const NavItemsContainer = styled.div`
+	gap: 10px;
 	display: flex;
 	align-items: center;
 	@media (max-width: 640px) {

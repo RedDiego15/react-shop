@@ -1,5 +1,5 @@
 import React from "react";
-import { DesktopMenu } from "@components/DesktopMenu/DesktopMenu";
+import { DesktopMenu } from "@components/Header__DesktopMenu/DesktopMenu";
 import { IoIosArrowDown } from "react-icons/io";
 import styled from "styled-components";
 
@@ -22,12 +22,12 @@ const StyledDownArrow = styled(IoIosArrowDown)`
 	padding: 4px;
 `;
 const StyledA = styled.a`
-	color: var(--hospital-green);
+	color: ${(props) => props.theme.hospital_green};
 `;
 const NavBarEmail = styled.li`
 	position: relative;
-	color: var(--very-light-pink);
-	font-size: var(--sm);
+	color: ${(props) => props.theme.very_light_pink};
+	font-size: ${(props) => props.theme.sm};
 	display: flex;
 	align-items: center;
 	margin-right: 36px;
@@ -43,7 +43,7 @@ const ContainerIcons = styled.div`
 	width: 16px;
 	height: 16px;
 	border-radius: 50%;
-	font-size: var(--sm);
+	font-size: ${(props) => props.theme.sm};
 	font-weight: bold;
 	display: flex;
 	justify-content: center;
