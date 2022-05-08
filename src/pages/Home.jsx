@@ -7,7 +7,6 @@ import { ItemDetail } from "@components/ItemDetail/ItemDetail";
 import { useResponsivePage } from "@hooks/useResponsivePage";
 
 import { CheckOut } from "@components/CheckOut/CheckOut";
-import { HeaderMobile } from "../components/HeaderMobile/HeaderMobile";
 import { AppContext } from "@context/AppContext";
 
 const Home = () => {
