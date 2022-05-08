@@ -1,9 +1,7 @@
 import React from "react";
 import { ActuallOrderItem } from "@components/ActuallOrderItem/ActuallOrderItem";
-import { OrderContainer } from "@containers/OrderContainer";
 import { AppContext } from "@context/AppContext";
 import { FaArrowLeft } from "react-icons/fa";
-
 import styled from "styled-components";
 import { PrimaryButton } from "@components/Buttons/PrimaryButton";
 
@@ -64,6 +62,7 @@ const NumberTotal = styled.p`
 function CheckOut({ isMobile }) {
 	const {
 		state: { cart },
+		setToggleOrder,
 	} = React.useContext(AppContext);
 	const calculateTotal = () => {
 		return cart.reduce(
@@ -73,7 +72,7 @@ function CheckOut({ isMobile }) {
 	};
 
 	return (
-		<OrderContainer>
+		<>
 			<StyledSectionMyOrder>
 				{!isMobile && (
 					<CheckOutHeader>
@@ -101,7 +100,7 @@ function CheckOut({ isMobile }) {
 
 				<PrimaryButton>Checkout</PrimaryButton>
 			</StyledSectionMyOrder>
-		</OrderContainer>
+		</>
 	);
 }
 

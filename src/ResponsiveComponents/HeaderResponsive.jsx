@@ -70,13 +70,17 @@ const HeaderResponsive = ({ isMobile, isDesktop }) => {
 			{isMobile && (
 				<Header>
 					<img src={IconMenu} alt="logo" />
-					<img src={YardSale} alt="logo" />
+					<img src={YardSale} alt="logo" onClick={() => navigate("/")} />
 					{dinamicCart()}
 				</Header>
 			)}
 			{isDesktop && (
 				<Header>
-					<StyledDesktopImg src={YardSale} alt="logo" />
+					<StyledDesktopImg
+						src={YardSale}
+						alt="logo"
+						onClick={() => navigate("/")}
+					/>
 					<CategoriesBar isMobile={isMobile} />
 					<HeaderRigth>{dinamicCart()}</HeaderRigth>
 				</Header>

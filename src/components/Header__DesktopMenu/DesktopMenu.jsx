@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const DesktopLoggedMenuContainer = styled.div`
 	display: none;
@@ -23,7 +24,7 @@ const StyledUl = styled.ul`
 const StyledLi = styled.li`
 	text-align: end;
 `;
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
 	color: ${(props) => props.theme.black};
 	text-decoration: none;
 	margin-bottom: 20px;
@@ -34,7 +35,7 @@ const SignOutItem = styled(StyledLi)`
 	padding-top: 20px;
 	border-top: 1px solid ${(props) => props.theme.very_light_pink};
 `;
-const StyledLinkSignOut = styled.a`
+const StyledLinkSignOut = styled(Link)`
 	color: ${(props) => props.theme.hospital_green};
 	font-size: ${(props) => props.theme.sm};
 `;
@@ -45,15 +46,15 @@ function DesktopMenu() {
 			<DesktopLoggedMenuContainer className="desktop-menu">
 				<StyledUl>
 					<StyledLi>
-						<StyledLink href="/">My orders</StyledLink>
+						<StyledLink to="/my-orders">My orders</StyledLink>
 					</StyledLi>
 
 					<StyledLi>
-						<StyledLink href="/">My account</StyledLink>
+						<StyledLink to="/edit-my-account">My account</StyledLink>
 					</StyledLi>
 
 					<SignOutItem>
-						<StyledLinkSignOut href="/">Sign out</StyledLinkSignOut>
+						<StyledLinkSignOut to="/">Sign out</StyledLinkSignOut>
 					</SignOutItem>
 				</StyledUl>
 			</DesktopLoggedMenuContainer>
