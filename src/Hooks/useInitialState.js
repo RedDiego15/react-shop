@@ -5,6 +5,7 @@ const initialState = {
 	toggleOrder: false,
 	totalItems: 0,
 	toggleItemInfo: false,
+	itemDetailFocus: {},
 };
 
 const useInitialState = () => {
@@ -15,6 +16,8 @@ const useInitialState = () => {
 	};
 
 	const addToCart = (payload) => {
+		debugger;
+		console.log('enter addto cart');
 		const item = findItem(payload);
 		if (item && item.quantity < 10) {
 			item.quantity = item.quantity + 1;
@@ -45,7 +48,6 @@ const useInitialState = () => {
 			...state,
 			toggleItemInfo: !state.toggleItemInfo,
 		});
-		console.log(state);
 	};
 	const actualizeQuantity = (payload, newQuantity) => {
 		const idx = state.cart.indexOf(payload);
@@ -63,6 +65,13 @@ const useInitialState = () => {
 			cart: state.cart.filter((item) => item.id !== deleteItem.id),
 		});
 	};
+	const setItemDetailFocus = (item) => {
+		setState({
+			...state,
+			toggleItemInfo: !state.toggleItemInfo,
+			itemDetailFocus: item,
+		});
+	};
 
 	return {
 		state,
@@ -71,6 +80,7 @@ const useInitialState = () => {
 		actualizeQuantity,
 		deleteItem,
 		setToggleItemInfo,
+		setItemDetailFocus,
 	};
 };
 

@@ -13,7 +13,6 @@ const Home = () => {
 	const { isMobile, isDesktop } = useResponsivePage();
 	const {
 		state: { toggleOrder, toggleItemInfo },
-		setToggleOrder,
 	} = React.useContext(AppContext);
 
 	return (

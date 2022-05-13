@@ -15,8 +15,12 @@ const StyledButton = styled.button`
 	align-items: center;
 	justify-content: center;
 `;
-const PrimaryButton = ({ children }) => {
-	return <StyledButton type="button">{children}</StyledButton>;
+const PrimaryButton = ({ children, handleAction }) => {
+	return (
+		<StyledButton onClick={() => handleAction()} type="button">
+			{children}
+		</StyledButton>
+	);
 };
 
 export { PrimaryButton };

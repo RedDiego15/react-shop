@@ -45,23 +45,20 @@ const ItemTitle = styled.p`
 	color: ${(props) => props.theme.very_light_pink};
 `;
 function Item({ item }) {
-	const [isSelected, setIsSelected] = React.useState(false);
-
-	const {
-		state: { toggleItemInfo },
-		addToCart,
-		setToggleItemInfo,
-	} = React.useContext(AppContext);
+	const { setItemDetailFocus, addToCart } = React.useContext(AppContext);
 	const addItem = () => {
-		setIsSelected((prevState) => !prevState);
 		addToCart(item);
+	};
+
+	const handleSelectedItem = () => {
+		setItemDetailFocus(item);
 	};
 
 	return (
 		<>
 			<ContainerProductCard>
 				<ProductImage
-					onClick={() => setToggleItemInfo()}
+					onClick={() => handleSelectedItem()}
 					src={item.category.image}
 					alt="product-image"
 				/>

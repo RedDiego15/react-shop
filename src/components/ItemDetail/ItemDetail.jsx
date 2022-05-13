@@ -71,7 +71,13 @@ const Description = styled.p`
 `;
 
 function ItemDetail({ isDesktop, isMobile }) {
-	const { setToggleItemInfo } = React.useContext(AppContext);
+	const {
+		setToggleItemInfo,
+		state: { itemDetailFocus },
+		addToCart,
+	} = React.useContext(AppContext);
+
+	const { category, price, title, description } = itemDetailFocus;
 
 	return (
 		<ProductDetail>
@@ -80,18 +86,15 @@ function ItemDetail({ isDesktop, isMobile }) {
 				{isMobile && <CloseIcon />}
 			</ProductDetailClose>
 
-			<ProductImg
-				src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-				alt="bike"
-			/>
+			<ProductImg src={category.image} alt="product-image" />
 			<ProductInfoContainer>
-				<Price>$35,00</Price>
-				<Title>Bike</Title>
-				<Description>
-					With its practical position, this bike also fulfills a decorative
-					function, add your hall or workspace.
-				</Description>
-				<PrimaryButton className="primary-button add-to-cart-button">
+				<Price>{price}</Price>
+				<Title>{title}</Title>
+				<Description>{description}</Description>
+				<PrimaryButton
+					handleAction={() => addToCart(itemDetailFocus)}
+					className="primary-button add-to-cart-button"
+				>
 					<img src={BtAddCart} alt="add to cart" />
 					Add to cart
 				</PrimaryButton>
