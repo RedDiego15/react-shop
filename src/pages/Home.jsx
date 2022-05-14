@@ -18,7 +18,7 @@ const Home = () => {
 	return (
 		<LayoutWithHeader>
 			<SearchResponsive isMobile={isMobile} isDesktop={isDesktop} />
-			<Products />
+			<Products isMobile={isMobile} isDesktop={isDesktop} />
 
 			{toggleOrder && (
 				<>

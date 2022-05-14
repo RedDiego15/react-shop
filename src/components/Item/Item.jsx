@@ -2,6 +2,8 @@ import React from "react";
 import AddToCarImage from "@icons/bt_add_to_cart.svg";
 import { AppContext } from "@context/AppContext";
 import styled from "styled-components";
+import { useResponsivePage } from "@hooks/useResponsivePage";
+import { useNavigate } from "react-router-dom";
 
 const ContainerProductCard = styled.div`
 	width: 240px;
@@ -44,14 +46,20 @@ const ItemTitle = styled.p`
 	margin-bottom: 0;
 	color: ${(props) => props.theme.very_light_pink};
 `;
+
 function Item({ item }) {
 	const { setItemDetailFocus, addToCart } = React.useContext(AppContext);
+	const { isMobile } = useResponsivePage();
+	const navigate = useNavigate();
 	const addItem = () => {
 		addToCart(item);
 	};
 
 	const handleSelectedItem = () => {
 		setItemDetailFocus(item);
+		if (isMobile) {
+			navigate("/mobile-product-detail");
+		}
 	};
 
 	return (

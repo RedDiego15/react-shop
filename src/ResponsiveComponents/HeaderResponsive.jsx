@@ -10,6 +10,7 @@ import CartNotificacionIcon from "@icons/icon_shopping_cart_notification.svg";
 import { AppContext } from "@context/AppContext";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { DinamicCart } from "./DinamicCart";
 
 const StyledDesktopImg = styled.img`
 	height: 26px;
@@ -69,9 +70,22 @@ const HeaderResponsive = ({ isMobile, isDesktop }) => {
 		<>
 			{isMobile && (
 				<Header>
-					<img src={IconMenu} alt="logo" />
+					<img
+						onClick={() => navigate("/mobile-categories")}
+						src={IconMenu}
+						alt="logo"
+					/>
 					<img src={YardSale} alt="logo" onClick={() => navigate("/")} />
-					{dinamicCart()}
+					{/* {dinamicCart()} */}
+					<DinamicCart length={cart.length}>
+						<Link to="/mobile-check-out">
+							<img
+								onClick={() => setToggleOrder()}
+								src={CartNotificacionIcon}
+								alt="shopping cart"
+							/>
+						</Link>
+					</DinamicCart>
 				</Header>
 			)}
 			{isDesktop && (
@@ -82,7 +96,19 @@ const HeaderResponsive = ({ isMobile, isDesktop }) => {
 						onClick={() => navigate("/")}
 					/>
 					<CategoriesBar isMobile={isMobile} />
-					<HeaderRigth>{dinamicCart()}</HeaderRigth>
+					{/* <HeaderRigth>{dinamicCart()}</HeaderRigth> */}
+					<HeaderRigth>
+						<DinamicCart length={cart.length}>
+							<>
+								<img
+									onClick={() => setToggleOrder()}
+									src={CartNotificacionIcon}
+									alt="shopping cart"
+								/>
+								<p className="header-rigth__product-to-buy">{totalItems}</p>
+							</>
+						</DinamicCart>
+					</HeaderRigth>
 				</Header>
 			)}
 		</>

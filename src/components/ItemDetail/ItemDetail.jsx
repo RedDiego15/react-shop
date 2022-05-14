@@ -5,6 +5,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { AppContext } from "@context/AppContext";
 import styled from "styled-components";
 import { PrimaryButton } from "@components/Buttons/PrimaryButton";
+import { Link } from "react-router-dom";
 
 const ProductDetail = styled.aside`
 	position: relative;
@@ -41,6 +42,7 @@ const CloseIcon = styled(FaArrowLeft)`
 	position: absolute;
 	top: 11px;
 	left: 7.5px;
+	color: black;
 `;
 const ProductImg = styled.img`
 	width: 100%;
@@ -83,7 +85,11 @@ function ItemDetail({ isDesktop, isMobile }) {
 		<ProductDetail>
 			<ProductDetailClose onClick={() => setToggleItemInfo()}>
 				{isDesktop && <CloseImg src={IconClose} alt="close" />}
-				{isMobile && <CloseIcon />}
+				{isMobile && (
+					<Link to="/">
+						<CloseIcon />
+					</Link>
+				)}
 			</ProductDetailClose>
 
 			<ProductImg src={category.image} alt="product-image" />
