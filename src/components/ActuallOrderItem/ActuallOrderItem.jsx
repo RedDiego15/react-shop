@@ -104,4 +104,4 @@ function ActuallOrderItem({ imageUrl, title, totalPrice, quantity, item }) {
 	);
 }
 
-export { ActuallOrderItem };
+export { ActuallOrderItem, StyledFigure, StyledImg };

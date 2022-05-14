@@ -16,8 +16,6 @@ const useInitialState = () => {
 	};
 
 	const addToCart = (payload) => {
-		debugger;
-		console.log('enter addto cart');
 		const item = findItem(payload);
 		if (item && item.quantity < 10) {
 			item.quantity = item.quantity + 1;

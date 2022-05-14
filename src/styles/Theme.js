@@ -9,6 +9,7 @@ const themes = {
 		very_light_pink: ' #C7C7C7',
 		text_input_field: ' #F7F7F7',
 		hospital_green: ' #ACD9B2',
+		backgroundColoroldOrder: '#bbbbbb3d',
 		sm: ' 14px',
 		md: ' 16px',
 		lg: ' 18px',
