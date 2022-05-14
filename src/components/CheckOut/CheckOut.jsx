@@ -4,6 +4,7 @@ import { AppContext } from "@context/AppContext";
 import { FaArrowLeft } from "react-icons/fa";
 import styled from "styled-components";
 import { PrimaryButton } from "@components/Buttons/PrimaryButton";
+import { useNavigate } from "react-router-dom";
 
 const StyledSectionMyOrder = styled.div`
 	width: 100%;
@@ -70,6 +71,7 @@ function CheckOut({ isMobile }) {
 			0
 		);
 	};
+	const navigate = useNavigate();
 
 	return (
 		<>
@@ -98,7 +100,9 @@ function CheckOut({ isMobile }) {
 					<NumberTotal>$ {calculateTotal()}</NumberTotal>
 				</Order_Container>
 
-				<PrimaryButton>Checkout</PrimaryButton>
+				<PrimaryButton handleAction={() => navigate("/my-order")}>
+					Checkout
+				</PrimaryButton>
 			</StyledSectionMyOrder>
 		</>
 	);

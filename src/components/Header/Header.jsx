@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const NavItemsContainer = styled.div`
 	gap: 10px;
+	padding: 0 15px;
 	display: flex;
 	align-items: center;
 	box-shadow: 0px 3px 2px 0px #999999;

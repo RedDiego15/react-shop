@@ -17,7 +17,7 @@ const StyledDesktopImg = styled.img`
 
 const HeaderResponsive = ({ isMobile, isDesktop }) => {
 	const {
-		state: { cart, toggleOrder },
+		state: { cart },
 		setToggleOrder,
 	} = React.useContext(AppContext);
 
